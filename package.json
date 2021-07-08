@@ -4,14 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"rm-rf dist;webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist; webpack  --config webpack.config.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "4",
-    "webpack-cli": "3"
+    "dart-sass": "^1.25.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "5",
+    "mini-css-extract-plugin": "^2.1.0",
+    "sass-loader": "^12.1.0",
+    "webpack": "5",
+    "webpack-cli": "4"
+  },
+  "dependencies": {
+    "css-loader": "5",
+    "style-loader": "^3.0.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
